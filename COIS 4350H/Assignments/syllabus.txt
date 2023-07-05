@@ -1,0 +1,242 @@
+1/16/23, 4:38 PM                                 COIS-4350H-A: High Performance Computing (2023WI - Peterborough Campus)
+
+
+
+
+   COIS-4350H-A: High Performance Computing
+   2023WI - Peterborough Campus
+
+
+   Instructor:
+   Instructor: Brian Srivastava
+   Email Address: bsrivastava@trentu.ca
+   Phone Number: 705-748-1011 x7092
+   Office: OC 102.5
+   Office Hours: TBA
+
+
+   Meeting Times:
+
+   The course will consist of weekly meetings Fridays 14:00-15:50 in SC 103 and a lab
+   Wednesdays from 15:00-15:50, and then 17:00-17:50 in OC202. Check the Academic
+   timetable for updates to rooms and times.
+   http://www.trentu.ca/timetable/
+
+
+
+   Department:
+
+   Academic Administrative Assistant: Elissa O'Neill
+   Email Address: cois@trentu.ca
+   Phone Number: 7802
+   Office: OC 102.6
+
+
+   Description:
+
+   High Performance Computing is the use of advanced computer architectures to solve
+   problems which require significant processing power, memory access, or storage. Core topics
+   include advanced computer architectures, programming for shared and distributed memory
+   machines, networking issues, caching, performance evaluation and parallel algorithms. Topics
+   are supplemented with case studies.
+
+
+
+   Learning Outcomes:
+
+https://my.trentu.ca/portal/applications/syllabus/detailPrint.php?syllabusId=24731                                         1/5
+1/16/23, 4:38 PM                                 COIS-4350H-A: High Performance Computing (2023WI - Peterborough Campus)
+
+
+   Students will be expected to demonstrate mastery of high-performance concepts including
+   both theory and programming practice.
+   Students will also be expected to research an area of HPC not covered in class and be able
+   independently develop working code and solve a problem in their chosen area.
+
+
+
+   Texts:
+
+   High Performance Computing, Modern Systems and Practices 1st Edition, Authors: Thomas
+   Sterling Matthew Anderson Maciej Brodowicz
+
+
+
+   Readings:
+
+   Students may be expected to watch tutorials on HPC concepts on Compute
+   Canada/SHARCNET https://www.sharcnet.ca/help/index.php/Main_Page
+   and https://www.youtube.com/channel/UCCRmb5_GMWT2hSlALHlwIMg
+   Students may also find it helpful to watch the video lectures which accompany the
+   textbook: https://iu.mediaspace.kaltura.com/channel/channelid/6563362
+
+
+
+   Assessments, Assignments and Tests:
+
+   Weekly Tech: Each week students will be expected to individually follow tutorials and show
+   that they can test and minimally use each of the listed technologies or concepts. These
+   weekly events will partially build on previous weeks.
+   Assignments: Assignments will be a combination of programming questions and theory
+   questions to demonstrate understanding of the material. Assignments cover Linux setup and
+   use, parallel computing concepts, including algorithms and data structures, and cluster topics
+   including architecture and execution. Because much of the purpose of HPC is in solving
+   numerical problems, students will be expected to learn some numerical methods.
+   Research Project: In the research project students will be expected to explore an area of HPC
+   which we aren’t actively discussing in depth in class and assignments
+
+
+
+   Grading:
+
+   Weekly Labs: 10% total, best 10/11 labs. The last week will only have time for review
+   questions and won't be a lab.
+   Assignment 1: 10% Benchmarking, writing HPC code, Due Feb 3rd
+   Assignment 2: 10% Parallel Computing Tools, Feb 27th
+   Assignment 3: 10% Parallel Tools for Clusters, March 17th
+   Assignment 4: 10% Parallel Algorithms/Data structures, Due April 6th
+   Research Project: 20% Due at the final exam
+   Final Exam: 30%
+
+https://my.trentu.ca/portal/applications/syllabus/detailPrint.php?syllabusId=24731                                         2/5
+1/16/23, 4:38 PM                                 COIS-4350H-A: High Performance Computing (2023WI - Peterborough Campus)
+
+   The final exam will be scheduled during the Fall exam period, students are expected to be
+   available for the whole exam period which is April 11th through 24th (inclusive).
+
+
+
+   Grade Total by Withdrawal Date:
+
+   Students will have approximately 5 labs, 3 assignments graded by the withdrawal
+   deadline; these total to 35% of a student’s final grade.
+   The final date to withdraw from this course is March 10th
+
+
+
+   Schedule:
+
+   Lecture Topics, Approximately 2 per week
+
+       1. Introduction
+       2. HPC Architecture
+       3. Commodity Clusters
+       4. Benchmarking
+       5. The Essential Moab
+       6. SMP
+       7. The Essential OpenMP
+       8. The Essential MPI
+       9. Parallel Algorithms
+      10. Libraries
+      11. Operating Systems
+      12. Scientific Visualization
+      13. Performance Monitoring
+      14. Debugging
+      15. Accelerators
+      16. Essential OpenACC
+      17. Mass Storage
+      18. File Systems
+      19. Map Reduce
+      20. Checkpointing
+      21. Beyond (Next Steps)
+
+   Each week students will be expected to complete a weekly programming related
+   tutorial/exercise in the labs
+
+
+
+   Course Guidelines:
+
+   While there is no attendance mark in this course, students are expected to regularly attend and
+   perform the laboratory exercises.
+   Late Assignments will have a penalty of 10% of the earned grade per working day, for a
+   maximum of 5 working days after which material will be not be accepted. Late labs are not
+   accepted.
+
+https://my.trentu.ca/portal/applications/syllabus/detailPrint.php?syllabusId=24731                                         3/5
+1/16/23, 4:38 PM                                 COIS-4350H-A: High Performance Computing (2023WI - Peterborough Campus)
+
+
+
+   Students are expected and encouraged to bring a laptop to the lab sessions and to collaborate
+   with other students. Assignments are to be done individually. Group work for the final project
+   will need to be agreed to with the instructor before the project is started.
+
+   In the event that this course runs in parallel with the AMOD High performance computing,
+   students will not be permitted to work in groups for the final project with graduate students,
+   without exception. The scope and nature of the projects is not the same between the two
+   courses.
+
+
+
+   University Policies:
+
+   Academic Integrity
+
+   Academic dishonesty, which includes plagiarism and cheating, is an extremely serious
+   academic offence and carries penalties varying from failure on an assignment to expulsion
+   from the University. Definitions, penalties, and procedures for dealing with plagiarism and
+   cheating are set out in Trent University’s Academic Integrity Policy. You have a responsibility to
+   educate yourself – unfamiliarity with the policy is not an excuse. You are strongly encouraged
+   to visit Trent’s Academic Integrity website to learn more: www.trentu.ca/academicintegrity.
+
+   Access to Instruction
+
+   It is Trent University's intent to create an inclusive learning environment. If a student has a
+   disability and documentation from a regulated health care practitioner and feels that they may
+   need accommodations to succeed in a course, the student should contact the Student
+   Accessibility Services Office (SAS) at the respective campus as soon as possible.
+
+   Sharing and Distribution of Course Content
+
+   Students in this class should be aware that classroom activities (lecture, seminars, labs, etc.)
+   may be recorded for teaching and learning purposes. Any students with concerns about being
+   recorded in a classroom context should speak with their professor. If a student shares or
+   distributes course content in any way that breaches copyright legislation, privacy legislation,
+   and/or this policy, the student will be subject to disciplinary actions under the relevant
+   Academic Integrity Policy, the Charter of Student Rights & Responsibilities, or the Policy on the
+   Protection of Personal Information, at a minimum, and may be subject to legal consequences
+   that are outside of the responsibility of the university.
+
+   Student Absenteeism, Missed Tests and Examinations
+
+   Students are responsible for completing all course requirements, including attending classes
+   and meeting assignment deadlines as specified on their syllabus.
+
+   Adjustments and deferrals to dates for participation, assignment submissions, tests, midterms
+   and final examinations are not automatic. It is the student’s responsibility to email their
+   instructor immediately if they are unable to fulfill academic requirements.
+
+   Courses delivered remotely may involve student participation in scheduled (synchronous)
+   classes via web-based platforms, such as Zoom. Students unable to participate (i.e., by video
+https://my.trentu.ca/portal/applications/syllabus/detailPrint.php?syllabusId=24731                                         4/5
+1/16/23, 4:38 PM                                 COIS-4350H-A: High Performance Computing (2023WI - Peterborough Campus)
+
+   and/or audio) should email their instructors to request alternative arrangements for
+   participation in these scheduled (synchronous) classes.
+
+   Students are required to be available for all tests, midterms and exams that are listed in their
+   course syllabus and scheduled by their instructor or the Office of the Registrar. Depending on
+   their program, the instructor or the chair/director may decide on alternative arrangements for
+   exams and tests. Normally a doctor’s note or supporting documentation is not required;
+   however, when a student’s success in the course or program is in jeopardy as determined by
+   the instructor or chair/director, documentation may be requested.
+
+   Specific SAS accommodations can be implemented for students registered with Student
+   Accessibility Services (SAS), but it is the responsibility of the student to make these
+   arrangements in advance as per SAS guidelines, and to discuss accommodations of due dates
+   with their instructors.
+
+   Students can notify the Office of the Registrar of their wish to observe cultural or religious
+   holidays during scheduled examination periods by the deadline set in the Academic Calendar.
+   Personal travel plans are not acceptable reasons for missing tests or exams.
+
+
+
+                                                                           Print
+
+
+
+
+https://my.trentu.ca/portal/applications/syllabus/detailPrint.php?syllabusId=24731                                         5/5
+

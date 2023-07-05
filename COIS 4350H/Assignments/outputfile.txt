@@ -1,0 +1,16 @@
+thorughput - Number of times performed: 87415
+thorughput - Number of times performed: 94001
+thorughput - Number of times performed: 98706
+thorughput - Number of times performed: 98349
+thorughput - Number of times performed: 97277
+thorughput - Number of times performed: 128791
+thorughput - Number of times performed: 131712
+thorughput - Number of times performed: 128629
+thorughput - Number of times performed: 129201
+thorughput - Number of times performed: 91747
+Time elapsed for 10000 runs: 0.0859665 seconds
+Time elapsed for 1000000 runs: 9.02537 seconds
+Time elapsed for 2500000 runs: 21.154 seconds
+Time elapsed for 3000000 runs: 25.4164 seconds
+Time elapsed for 10000000 runs: 83.6645 seconds
+Time elapsed for 10000000 runs: 75.964 seconds
