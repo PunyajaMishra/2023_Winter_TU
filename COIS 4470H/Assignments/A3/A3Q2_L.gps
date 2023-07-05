@@ -1,0 +1,36 @@
+        SIMULATE
+        REALLOCATE      COM,20000
+
+        REAL &U15
+        LET &U15=0
+
+        REAL &U20
+        LET &U20=0
+
+        GENERATE   RVEXPO(1,55)
+        TRANSFER   .50,SER2,SER1
+
+SER1    QUEUE      LINE1
+        SEIZE      SERVER1
+        DEPART     LINE1
+        ADVANCE    100
+        RELEASE    SERVER1
+        BLET &U15=&U15+1
+        TRANSFER   ,AFT
+
+SER2    QUEUE      LINE2
+        SEIZE      SERVER2
+        DEPART     LINE2
+        ADVANCE    100
+        RELEASE    SERVER2
+        BLET &U20=&U20+1
+        TRANSFER   ,AFT
+        
+AFT     TERMINATE  1
+        START      100             
+
+        PUTPIC FILE=A3Q2LO,LINES=2,(&U15,&U20)
+	    Server 1 is ****
+	    Server 2 is****
+	    
+        END

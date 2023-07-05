@@ -1,0 +1,39 @@
+        SIMULATE
+        
+        REAL &U15
+        LET &U15=0
+
+        REAL &U30
+        LET &U30=0
+
+HOISTS  STORAGE    3
+
+        GENERATE   4,1
+        QUEUE      GARAGE
+
+        QUEUE      WAIT
+        ENTER      HOISTS
+        DEPART     WAIT
+        
+        ADVANCE    7,2     
+        LEAVE      HOISTS
+        DEPART     GARAGE
+
+        BLET &U30=&U30+1
+
+        TEST GE M1,15,AFT
+        BLET &U15=&U15+1
+
+AFT     TERMINATE
+        
+        
+        GENERATE   18000     
+        TERMINATE  1        
+
+        START      1             
+
+        PUTPIC FILE=A2Q5OUTA2,LINES=2,(&U15,&U30)
+	Wait more than 15 minutes is ****
+        Total Customers is ****
+	    
+        END

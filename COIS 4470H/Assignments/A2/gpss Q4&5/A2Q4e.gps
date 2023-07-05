@@ -1,0 +1,48 @@
+        SIMULATE
+
+        REAL &U10
+        LET &U10=0
+
+        REAL &U15
+        LET &U15=0
+
+        REAL &U20
+        LET &U20=0
+
+        REAL &U21
+        LET &U21=0
+
+        GENERATE   RVEXPO(2,15)
+        
+        QUEUE      WAITINGROOM     
+        SEIZE      DOCTOR
+        DEPART     WAITINGROOM
+        
+        ADVANCE    RVEXPO(3,14)            
+        RELEASE    DOCTOR
+        
+        TEST LE M1,10,SECOND
+        BLET &U10=&U10+1
+
+SECOND  TEST GE M1,10,THIRD
+        TEST LE M1,15,THIRD
+        BLET &U15=&U15+1
+
+THIRD   TEST GE M1,15,FOURTH
+        TEST LE M1,20,FOURTH
+        BLET &U20=&U20+1
+
+FOURTH  TEST GE M1,20,AFT
+        BLET &U21=&U21+1
+
+AFT     TERMINATE  1
+
+        START      100             Simulate for 100 customers
+
+        PUTPIC FILE=A2Q4EOUT,LINES=4,(&U10,&U15,&U20,&U21)
+	    Less than 10 is ****
+	    Between 10 and 15 is ****
+        Between 15 and 20 is ****
+        More than 20 is ****
+
+        END

@@ -1,0 +1,42 @@
+        SIMULATE
+        REALLOCATE      COM,20000
+
+        REAL &U15
+        LET &U15=0
+DRIVER  STORAGE    1        
+HOISTS  STORAGE    3
+MECHANIC    STORAGE    2
+
+        GENERATE   RVEXPO(1,4)
+        QUEUE      GARAGE
+        
+        QUEUE      WAIT
+        ENTER      HOISTS
+        ENTER      DRIVER
+        DEPART     WAIT
+        
+        ADVANCE    RVEXPO(3,1)
+        LEAVE      DRIVER
+        
+        ENTER      MECHANIC
+        ADVANCE    RVEXPO(5,7)     
+        LEAVE      MECHANIC
+
+        ENTER      DRIVER
+        ADVANCE    RVEXPO(2,2)
+        LEAVE      HOISTS
+        LEAVE      DRIVER
+
+        DEPART     GARAGE
+        
+        TEST GE M1,15,AFT
+        BLET &U15=&U15+1
+
+AFT     TERMINATE  1
+
+        START      400             
+
+        PUTPIC FILE=A2Q5COUT,LINES=1,(&U15)
+	    Wait more than 15 minutes is ****
+	    
+        END

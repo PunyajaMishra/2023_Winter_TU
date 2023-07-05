@@ -1,0 +1,16 @@
+*123456789012345678901234567890
+            SIMULATE                
+            GENERATE    RVEXPO(2,15)
+
+            QUEUE       WAITINGROOM     
+            SEIZE       DOCTOR
+            DEPART      WAITINGROOM
+            
+            ADVANCE     RVEXPO(3,14)            
+            RELEASE     DOCTOR
+            
+            TERMINATE   1   
+ 
+            START       100         FOR 100 CUSTOEMRS
+            END
+

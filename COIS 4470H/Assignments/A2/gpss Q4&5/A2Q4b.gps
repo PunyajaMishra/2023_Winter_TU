@@ -1,0 +1,14 @@
+*123456789012345678901234567890
+            SIMULATE                
+            GENERATE    5,3.5     PATIENT INTERARRIVAL TIME
+            QUEUE       WAIT        WAITING FOR DOCTOR
+            SEIZE       DOCTOR      GET DOCTOR
+            DEPART      WAIT        DONE WAITING LINE
+            ADVANCE     14,5        DOCTOR SERVICE TIME
+            RELEASE     DOCTOR
+            TABULATE    RES
+            TERMINATE   1           REMOVE 1 PATIENT FORM TERMINATION COUNTER
+ RES        TABLE       M1,5,5,10     
+ 
+            START       100         FOR 100 CUSTOEMRS
+            END

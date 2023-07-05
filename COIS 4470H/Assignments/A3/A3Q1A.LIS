@@ -1,0 +1,150 @@
+ 
+Couldn't find and open GPSS/H error-message file!!  It must be in a directory
+that is specified in the PATH environment variable, or in the current directory,
+or in the root directory.
+
+    STUDENT GPSS/H RELEASE 3.0n-C10 (UG207)     15 Mar 2023   13:54:04     FILE: A3Q1a.gps
+
+    LINE# STMT#  IF DO  BLOCK#  *LOC	OPERATION	A,B,C,D,E,F,G	COMMENTS  
+ 
+        1     1                         SIMULATE
+        2     2                         REALLOCATE      COM,20000
+        3     3                  
+        4     4              1          GENERATE   RVEXPO(1,30)
+        5     5              2          TRANSFER   .58,WALL,MORN
+        6     6                  
+        7     7              3  MORN    QUEUE      LINE1
+        8     8              4          SEIZE      VENDOR1
+        9     9              5          DEPART     LINE1
+       10    10                  
+       11    11              6          ADVANCE    40,4
+       12    12              7          RELEASE    VENDOR1
+       13    13              8          TERMINATE
+       14    14                  
+       15    15              9  WALL    QUEUE      LINE2
+       16    16             10          SEIZE      VENDOR2
+       17    17             11          DEPART     LINE2
+       18    18                  
+       19    19             12          ADVANCE    40,4
+       20    20             13          RELEASE    VENDOR2
+       21    21             14          TERMINATE
+       22    22                         
+       23    23             15          GENERATE   7200     
+       24    24             16          TERMINATE  1        
+       25    25                  
+       26    26                         START      1   
+       27    27                         END
+
+ENTITY DICTIONARY (IN ASCENDING ORDER BY ENTITY NUMBER; "*" => VALUE CONFLICT.)
+
+       Facilities: 1=VENDOR1       2=VENDOR2
+
+           Queues: 1=LINE1         2=LINE2
+
+   Random Numbers: 1
+
+SYMBOL   VALUE   EQU DEFNS  CONTEXT      REFERENCES BY STATEMENT NUMBER
+ 
+MORN         3           7  Block            5
+WALL         9          15  Block            5
+ 
+VENDOR1      1              Facility         8    12
+VENDOR2      2              Facility        16    20
+ 
+LINE1        1              Queue            7     9
+LINE2        2              Queue           15    17
+ 
+1            1              Random Nmbr      4
+
+
+
+STORAGE REQUIREMENTS (BYTES)
+
+COMPILED CODE:      438
+COMPILED DATA:       80
+MISCELLANEOUS:        0
+ENTITIES:           428
+COMMON:           20000
+-----------------------
+TOTAL:            20946
+
+
+
+GPSS/H MODEL SIZE:
+
+CONTROL STATEMENTS      3
+BLOCKS                 16
+
+
+
+Simulation begins.
+
+RELATIVE CLOCK: 7200.0000   ABSOLUTE CLOCK: 7200.0000
+
+
+
+BLOCK CURRENT     TOTAL  BLOCK CURRENT     TOTAL  
+1                   220  11                   91 
+2                   220  12          1        91 
+MORN        3       127  13                   90 
+4                   124  14                   90 
+5                   124  15                    1 
+6           1       124  16                    1 
+7                   123 
+8                   123 
+WALL        2        93 
+10                   91 
+
+
+
+          --AVG-UTIL-DURING--                                                               
+FACILITY  TOTAL  AVAIL  UNAVL     ENTRIES    AVERAGE   CURRENT  PERCENT  SEIZING  PREEMPTING
+           TIME   TIME   TIME               TIME/XACT   STATUS   AVAIL     XACT      XACT   
+ VENDOR1  0.683                       124      39.642    AVAIL              215 
+ VENDOR2  0.498                        91      39.435    AVAIL              218 
+
+
+
+   QUEUE     MAXIMUM      AVERAGE       TOTAL        ZERO     PERCENT      AVERAGE      $AVERAGE     QTABLE     CURRENT
+            CONTENTS     CONTENTS      ENTRIES     ENTRIES     ZEROS      TIME/UNIT    TIME/UNIT     NUMBER    CONTENTS
+   LINE1           4        0.660         127          29       22.8        37.441        48.521                      3
+   LINE2           4        0.219          93          49       52.7        16.972        35.873                      2
+
+
+
+  RANDOM    ANTITHETIC     INITIAL     CURRENT      SAMPLE   CHI-SQUARE
+  STREAM      VARIATES    POSITION    POSITION       COUNT   UNIFORMITY
+       1           OFF      100000      100656         656      0.72
+
+
+
+STATUS OF COMMON STORAGE
+
+   18768 BYTES AVAILABLE
+    1232 IN USE
+    1344 USED (MAX)
+
+Simulation terminated.  Absolute Clock: 7200.0000
+
+
+
+Total Block Executions: 1733
+
+Blocks / second:        6419
+
+Microseconds / Block: 155.80
+
+
+
+Elapsed Time Used (SEC)
+ 
+PASS1:           0.11
+PASS2:           0.06
+LOAD/CTRL:       0.05
+EXECUTION:       0.27
+OUTPUT:          0.06
+---------------------
+TOTAL:           0.55
+
+GPSS/H IS A PROPRIETARY PRODUCT OF, AND IS USED UNDER A LICENSE GRANTED BY, THE WOLVERINE SOFTWARE CORPORATION,
+7617 LITTLE RIVER TURNPIKE, ANNANDALE, VIRGINIA 22003-2603, USA.

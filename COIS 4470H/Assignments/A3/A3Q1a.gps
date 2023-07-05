@@ -1,0 +1,27 @@
+        SIMULATE
+        REALLOCATE      COM,20000
+
+        GENERATE   RVEXPO(1,30)
+        TRANSFER   .58,WALL,MORN
+
+MORN    QUEUE      LINE1
+        SEIZE      VENDOR1
+        DEPART     LINE1
+
+        ADVANCE    40,4
+        RELEASE    VENDOR1
+        TERMINATE
+
+WALL    QUEUE      LINE2
+        SEIZE      VENDOR2
+        DEPART     LINE2
+
+        ADVANCE    40,4
+        RELEASE    VENDOR2
+        TERMINATE
+        
+        GENERATE   7200     
+        TERMINATE  1        
+
+        START      1   
+        END

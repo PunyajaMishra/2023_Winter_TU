@@ -1,0 +1,152 @@
+ 
+Couldn't find and open GPSS/H error-message file!!  It must be in a directory
+that is specified in the PATH environment variable, or in the current directory,
+or in the root directory.
+
+    STUDENT GPSS/H RELEASE 3.0n-C10 (UG207)     27 Feb 2023   18:58:32     FILE: A2Q5a.gps
+
+    LINE# STMT#  IF DO  BLOCK#  *LOC	OPERATION	A,B,C,D,E,F,G	COMMENTS  
+ 
+        1     1                         SIMULATE
+        2     2                  
+        3     3                         REAL &U15
+        4     4                         LET &U15=0
+        5     5                 HOISTS  STORAGE    3
+        6     6                  
+        7     7              1          GENERATE   4,1
+        8     8              2          QUEUE      GARAGE
+        9     9                  
+       10    10              3          QUEUE      WAIT
+       11    11              4          ENTER      HOISTS
+       12    12              5          DEPART     WAIT
+       13    13                         
+       14    14              6          TEST GE M1,15,AFT
+       15    15              7          BLET &U15=&U15+1
+       16    16                   
+       17    17              8  AFT     ADVANCE    10,2
+       18    18              9          LEAVE      HOISTS
+       19    19             10          DEPART     GARAGE
+       20    20                         
+       21    21             11          TERMINATE  1
+       22    22                  
+       23    23                         START      2000             
+       24    24                  
+       25    25                         PUTPIC FILE=A2Q5AOUT,LINES=1,(&U15)
+       26    26                             Wait more than 15 minutes is ****
+       27    27                 	    
+       28    28                         END
+
+ENTITY DICTIONARY (IN ASCENDING ORDER BY ENTITY NUMBER; "*" => VALUE CONFLICT.)
+
+           Queues: 1=GARAGE        2=WAIT
+
+         Storages: 1=HOISTS
+
+       Real &Vars: 1=U15
+
+            Files: 1=A2Q5AOUT
+
+SYMBOL   VALUE   EQU DEFNS  CONTEXT      REFERENCES BY STATEMENT NUMBER
+ 
+AFT          8          17  Block           14
+ 
+GARAGE       1              Queue            8    19
+WAIT         2              Queue           10    12
+ 
+HOISTS       1           5  Storage         11    18
+ 
+U15          1           3  Real             4    15    15    25
+ 
+A2Q5AOUT     1              File            25
+
+
+
+STORAGE REQUIREMENTS (BYTES)
+
+COMPILED CODE:      450
+COMPILED DATA:       40
+MISCELLANEOUS:       47
+ENTITIES:           456
+COMMON:           10000
+-----------------------
+TOTAL:            10993
+
+
+
+GPSS/H MODEL SIZE:
+
+CONTROL STATEMENTS      6
+BLOCKS                 11
+
+
+
+Simulation begins.
+
+RELATIVE CLOCK: 8020.6646   ABSOLUTE CLOCK: 8020.6646
+
+
+
+BLOCK CURRENT     TOTAL  BLOCK CURRENT     TOTAL  
+1                  2002  11                 2000 
+2                  2002 
+3                  2002 
+4                  2002 
+5                  2002 
+6                  2002 
+7                     0 
+AFT         2      2002 
+9                  2000 
+10                 2000 
+
+
+
+          --AVG-UTIL-DURING--                                                                                          
+ STORAGE  TOTAL  AVAIL  UNAVL     ENTRIES    AVERAGE   CURRENT  PERCENT    CAPACITY     AVERAGE     CURRENT     MAXIMUM
+           TIME   TIME   TIME               TIME/UNIT   STATUS   AVAIL                 CONTENTS    CONTENTS    CONTENTS
+  HOISTS  0.833                      2002      10.010    AVAIL   100.0            3       2.499           2           3
+
+
+
+   QUEUE     MAXIMUM      AVERAGE       TOTAL        ZERO     PERCENT      AVERAGE      $AVERAGE     QTABLE     CURRENT
+            CONTENTS     CONTENTS      ENTRIES     ENTRIES     ZEROS      TIME/UNIT    TIME/UNIT     NUMBER    CONTENTS
+  GARAGE           5        2.518        2002           0                   10.086        10.086                      2
+    WAIT           2        0.019        2002        1772       88.5         0.076         0.665                      0
+
+
+
+  RANDOM    ANTITHETIC     INITIAL     CURRENT      SAMPLE   CHI-SQUARE
+  STREAM      VARIATES    POSITION    POSITION       COUNT   UNIFORMITY
+       1           OFF      100000      104005        4005      0.86
+
+
+
+STATUS OF COMMON STORAGE
+
+    9488 BYTES AVAILABLE
+     512 IN USE
+     928 USED (MAX)
+
+Simulation terminated.  Absolute Clock: 8020.6646
+
+
+
+Total Block Executions: 20014
+
+Blocks / second:        8103
+
+Microseconds / Block: 123.41
+
+
+
+Elapsed Time Used (SEC)
+ 
+PASS1:           0.11
+PASS2:           0.05
+LOAD/CTRL:       0.06
+EXECUTION:       2.47
+OUTPUT:          0.06
+---------------------
+TOTAL:           2.75
+
+GPSS/H IS A PROPRIETARY PRODUCT OF, AND IS USED UNDER A LICENSE GRANTED BY, THE WOLVERINE SOFTWARE CORPORATION,
+7617 LITTLE RIVER TURNPIKE, ANNANDALE, VIRGINIA 22003-2603, USA.

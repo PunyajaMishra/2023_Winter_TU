@@ -1,0 +1,15 @@
+*123456789012345678901234567890
+            SIMULATE
+ MECHANIC   STORAGE     3                
+            GENERATE    15,1     
+            QUEUE       WAIT        
+            ENTER       MECHANIC      
+            DEPART      WAIT        
+            ADVANCE     10,2        
+            LEAVE     MECHANIC
+            TABULATE    RES
+            TERMINATE   1           
+ RES        TABLE       M1,5,5,10     
+
+            START       200         
+            END
